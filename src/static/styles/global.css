@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Inter:wght@400;900&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Inter;
+    background: #2a2c31 !important;
+    position: relative;
+}
+
+input {
+    backdrop-filter: blur(5px);
+}
+
+.stars-wrapper {
+    position: absolute;
+    pointer-events: none;
+    transform-style: preserve-3d;
+    opacity: 0.3;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: twinkle 4s ease-in-out infinite;
+}
+
+.stars:nth-child(2) {
+    animation-delay: -1.12s;
+    animation-delay: calc(3s*-.28);
+}
+
+.stars:nth-child(3) {
+    animation-delay: -2.18s;
+    animation-delay: calc(4s*-.73);
+}
+
+.star {
+    fill: #fff;
+}
+
+.ufo {
+    animation: float 8s ease-in-out infinite;
+}
+
+.background {
+    position: absolute;
+    opacity: 0.3;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: -150px auto 0 auto;
+    filter: blur(120px);
+    width: 100%;
+    animation: expanse 15s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    25% {
+        opacity: 0;
+    }
+}
+
+@keyframes float {
+	0% {
+        filter: drop-shadow(0 0 0.5rem rgba(0,0,0,0.4));
+		transform: translatey(5px);
+	}
+	50% {
+		filter: drop-shadow(0 20px 1rem rgba(0,0,0,0.2));
+		transform: translatey(-18px);
+	}
+	100% {
+		filter: drop-shadow(0 0 0.5rem rgba(0,0,0,0.4));
+		transform: translatey(5px);
+	}
+}
+
+@keyframes expanse {
+	0% {
+        opacity: 0.3;
+	}
+	50% {
+		opacity: 0.6;
+	}
+	100% {
+		opacity: 0.3;
+	}
+}
