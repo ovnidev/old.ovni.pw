@@ -1,6 +1,6 @@
 import Generator from "../islands/Generator.tsx"
 import FAQ from "../islands/FAQ.tsx"
-import By from "../islands/By.tsx"
+import Author from "../islands/Author.tsx"
 import Footer from "../islands/Footer.tsx"
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
 		<>
 			<Generator />
 			<FAQ />
-			<By />
+			<Author />
 			<Footer />
 		</>
 	)
